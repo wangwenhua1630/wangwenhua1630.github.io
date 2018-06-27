@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,vuex," />
 
 
 
@@ -79,17 +79,23 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="练习这个主要是为了更熟练的运用vue与vuex的用法与实现，也更能熟练的掌握vue中周期钩子函数什么时候  进行使用，以及条件语句v-show/v-if、循环语句v-for、计算属性computed、样式绑定、事件处理等使用方法，对vue  的状态管理器vuex也等更好的掌握与体验">
+<meta name="keywords" content="vue,vuex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/04/16/hello-world/index.html">
+<meta property="og:title" content="vue-music音乐播放器实战练习">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/vue-music/index.html">
 <meta property="og:site_name" content="桦仔博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="练习这个主要是为了更熟练的运用vue与vuex的用法与实现，也更能熟练的掌握vue中周期钩子函数什么时候  进行使用，以及条件语句v-show/v-if、循环语句v-for、计算属性computed、样式绑定、事件处理等使用方法，对vue  的状态管理器vuex也等更好的掌握与体验">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-16T12:53:07.000Z">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/img/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/img/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/img/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/img/4.jpg">
+<meta property="og:updated_time" content="2018-06-27T11:08:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="vue-music音乐播放器实战练习">
+<meta name="twitter:description" content="练习这个主要是为了更熟练的运用vue与vuex的用法与实现，也更能熟练的掌握vue中周期钩子函数什么时候  进行使用，以及条件语句v-show/v-if、循环语句v-for、计算属性computed、样式绑定、事件处理等使用方法，对vue  的状态管理器vuex也等更好的掌握与体验">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/27/img/1.jpg">
 
 
 
@@ -119,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/16/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/27/vue-music/"/>
 
 
 
 
 
-  <title>Hello World | 桦仔博客</title>
+  <title>vue-music音乐播放器实战练习 | 桦仔博客</title>
   
 
 
@@ -262,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/27/vue-music/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="David wang">
@@ -279,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">vue-music音乐播放器实战练习</h1>
         
 
         <div class="post-meta">
@@ -291,8 +297,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T20:53:07+08:00">
-                2018-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T19:08:25+08:00">
+                2018-06-27
               </time>
             
 
@@ -301,6 +307,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue实战练习/" itemprop="url" rel="index">
+                    <span itemprop="name">vue实战练习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -329,16 +357,30 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p><strong>练习这个主要是为了更熟练的运用vue与vuex的用法与实现，也更能熟练的掌握vue中周期钩子函数什么时候<br>  进行使用，以及条件语句v-show/v-if、循环语句v-for、计算属性computed、样式绑定、事件处理等使用方法，对vue<br>  的状态管理器vuex也等更好的掌握与体验</strong></p>
 <a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>##数据抓取<br>  播放器最重要的就是播放的音乐,但上万首歌曲的数据自己肯定没有这么多的资源，所以就需要去通过抓取主流播放器的<br>数据，在这我在百度上搜了一篇比较好的抓取网页数据的方法，地址(<a href="https://www.jianshu.com/p/d6093acbb229),利用" target="_blank" rel="noopener">https://www.jianshu.com/p/d6093acbb229),利用</a><br>php中的file_get_contents()函数进行网页读入后转换成字符串<br>建立php文件<br>‘’’php<br>    // 允许所有域访问<br>header(“Access-Control-Allow-Origin: *”);</p>
+<pre><code>// 接收一个参数，参数名叫url
+</code></pre><p>$url = $_GET[‘url’];</p>
+<pre><code>// 酷狗的网址
+</code></pre><p>$crossUrl = ‘<a href="http://m.kugou.com/&#39;.$url" target="_blank" rel="noopener">http://m.kugou.com/&#39;.$url</a>;</p>
+<pre><code>// 把这个网页读取后转成字符串
+</code></pre><p>$res = file_get_contents($crossUrl);</p>
+<pre><code>// 输出这个字符串
+</code></pre><p>echo $res;</p>
+<pre><code>作者：晏子楚
+</code></pre><p>链接：<a href="https://www.jianshu.com/p/d6093acbb229" target="_blank" rel="noopener">https://www.jianshu.com/p/d6093acbb229</a></p>
+<pre><code>來源：简书
+</code></pre><p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br>‘’’<br>然后将PHP文件部署到自己的服务器(<a href="http://wwhblog1.applinzi.com/data/zhuaqu.php)上后，通过异步请求" target="_blank" rel="noopener">http://wwhblog1.applinzi.com/data/zhuaqu.php)上后，通过异步请求</a><br>‘’’js<br>     axios.get(‘<a href="http://wwhblog1.applinzi.com/data/zhuaqu.php?url=...&#39;).then(function(res){" target="_blank" rel="noopener">http://wwhblog1.applinzi.com/data/zhuaqu.php?url=...&#39;).then(function(res){</a><br>        …<br>    }<br>‘’’<br>传递$url参数，对网页数据的抓取，抓取成功后，在使用DOM操作，将需要的数据生成<br>本次练习抓取的播放器数据位酷狗(<a href="https://m.kugou.com" target="_blank" rel="noopener">https://m.kugou.com</a>)</p>
+<p>##vue页面布局<br>布局图<br><img src="../img/1.jpg" alt="img"><br>m-header     //显示搜索栏<br>m-nav        //显示导航目录，通过router-link进行跳转<br>router-view  //显示导航目录跳转的详细信息<br>m-play       //音乐播放器，也是该项目最重要的模块<br>根据布局图实现vue-router<br><img src="../img/2.jpg" alt="img"><br>m-header、m-nav、m-play定义在home中，router-view容器中实现导航列表与列表下详情页的实现</p>
+<p>##播放器<br>vue-music项目中整个核心就在播放器中<br>播放器由播放菜单栏(.play_info)与播放详情页(bigPlay)组成<br><img src="../img/3.jpg" alt="img"><img src="../img/4.jpg" alt="img"></p>
+<p>#播放/暂停时间stop()<br>  先确认<audio>标签中的src是否有值，初始化为unknown，若无值ting=false,播放器按钮的背景就无法进行改变，<br>再更具this.ting去判断是否audio元素进行暂停还是播放，并更具判断设定一系列的设定<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">this</span>.nowAudio.src）&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.ting)&#123;...&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></audio></p>
+<p>#上一首pre()<br>  判断this.songListIndex(当前播放曲单的下标)是否为0，也就是第一首，若是第一首就更新vuex中state中<br>nowSongListIndex的值，m-play中computed计算属性基于它的依赖缓存，相关依赖发生改变时会又会重新取值<br>更新view界面的数据</p>
+<p>#下一首next()<br>  判断this.songListIndex(当前播放曲单的下标)是否为this.songListIndex-1，也就是最后一首，若是<br>最后一首就更新vuex中state中nowSongListIndex的值，m-play中computed计算属性基于它的依赖缓存，相关<br>依赖发生改变时会又会重新取值更新view界面的数据</p>
+<p>#watch属性<br> 在m-play中定义了watch属性去鉴听song当播放上一首或下一首歌曲是相关的数值初始化或背景样式的变化<br>以及音乐进度条的变化(songCurrent)与当前音乐播放时长的变化(nowCurrentTime)</p>
+<p>##过程中出现的问题<br>1.m-play组件的放置<br>  刚开始我将m-play放在各导航目录组件下，这就导致我在播放音乐时，每进入一个导航目录时，都会初始化我的<br>m-play组件，不能是播放一首歌曲是可以任意去别的页面，所以最后我将m-play组件放置在home组件中，直接解决<br>此问题<br>2.input[text=range] v-model=songCurrent问题<br>  在我绑定range表单后，在timeProgess()周期函数中，每隔1s我就根据歌曲播放的时间来更新songCurrent的值<br>但是我在watch中设置了songCurrent来监听我对滑轨的滑动，这就会导致音乐播放时会出现重音的效果，后检查因为<br>我在timeProgess()周期函数中设置了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.songCurrent=<span class="built_in">Math</span>.floor(<span class="keyword">this</span>.nowAudio.currentTime);   </span><br><span class="line"><span class="comment">//进度条上时间与歌曲时间一致</span></span><br></pre></td></tr></table></figure></p>
+<p>在watch中设置了一但songCurrent变动就实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.nowAudio.currentTime=newValue;</span><br></pre></td></tr></table></figure></p>
+<p>可能因为时差的关系，在周期函数中每1s更新songCurrent,watch中有重置songCurrent导致播放重复<br>最后，我就将周期函数中this.songCurrent直接换成this.nowAudio.vlue,我每秒钟去更新value的值，而<br>songCurrent只是去监听滑轨有变动再执行，问题解决，无重音</p>
 
       
     </div>
@@ -354,6 +396,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/vuex/" rel="tag"># vuex</a>
+          
+        </div>
+      
 
       
       
@@ -363,15 +413,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/24/vue-cli/" rel="next" title="搭建vue脚手架的过程与步骤">
+                <i class="fa fa-chevron-left"></i> 搭建vue脚手架的过程与步骤
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/16/hexo-github/" rel="prev" title="使用hexo与github搭建个人免费博客的安装流程与步骤">
-                使用hexo与github搭建个人免费博客的安装流程与步骤 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -423,17 +473,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,22 +534,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
