@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/27/img/2.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/27/img/3.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/27/img/4.jpg">
-<meta property="og:updated_time" content="2018-06-27T11:08:25.000Z">
+<meta property="og:updated_time" content="2018-06-27T12:07:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-music音乐播放器实战练习">
 <meta name="twitter:description" content="练习这个主要是为了更熟练的运用vue与vuex的用法与实现，也更能熟练的掌握vue中周期钩子函数什么时候  进行使用，以及条件语句v-show/v-if、循环语句v-for、计算属性computed、样式绑定、事件处理等使用方法，对vue  的状态管理器vuex也等更好的掌握与体验">
@@ -297,7 +297,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T19:08:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T20:07:32+08:00">
                 2018-06-27
               </time>
             
@@ -372,8 +372,8 @@
 </code></pre><p>链接：<a href="https://www.jianshu.com/p/d6093acbb229" target="_blank" rel="noopener">https://www.jianshu.com/p/d6093acbb229</a></p>
 <pre><code>來源：简书
 </code></pre><p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br>‘’’<br>然后将PHP文件部署到自己的服务器(<a href="http://wwhblog1.applinzi.com/data/zhuaqu.php)上后，通过异步请求" target="_blank" rel="noopener">http://wwhblog1.applinzi.com/data/zhuaqu.php)上后，通过异步请求</a><br>‘’’js<br>     axios.get(‘<a href="http://wwhblog1.applinzi.com/data/zhuaqu.php?url=...&#39;).then(function(res){" target="_blank" rel="noopener">http://wwhblog1.applinzi.com/data/zhuaqu.php?url=...&#39;).then(function(res){</a><br>        …<br>    }<br>‘’’<br>传递$url参数，对网页数据的抓取，抓取成功后，在使用DOM操作，将需要的数据生成<br>本次练习抓取的播放器数据位酷狗(<a href="https://m.kugou.com" target="_blank" rel="noopener">https://m.kugou.com</a>)</p>
-<p>##vue页面布局<br>布局图<br><img src="../img/1.jpg" alt="img"><br>m-header     //显示搜索栏<br>m-nav        //显示导航目录，通过router-link进行跳转<br>router-view  //显示导航目录跳转的详细信息<br>m-play       //音乐播放器，也是该项目最重要的模块<br>根据布局图实现vue-router<br><img src="../img/2.jpg" alt="img"><br>m-header、m-nav、m-play定义在home中，router-view容器中实现导航列表与列表下详情页的实现</p>
-<p>##播放器<br>vue-music项目中整个核心就在播放器中<br>播放器由播放菜单栏(.play_info)与播放详情页(bigPlay)组成<br><img src="../img/3.jpg" alt="img"><img src="../img/4.jpg" alt="img"></p>
+<p>##vue页面布局<br>布局图<br><img src="../img/1.jpg" alt="img1"><br>m-header     //显示搜索栏<br>m-nav        //显示导航目录，通过router-link进行跳转<br>router-view  //显示导航目录跳转的详细信息<br>m-play       //音乐播放器，也是该项目最重要的模块<br>根据布局图实现vue-router<br><img src="../img/2.jpg" alt="img2"><br>m-header、m-nav、m-play定义在home中，router-view容器中实现导航列表与列表下详情页的实现</p>
+<p>##播放器<br>vue-music项目中整个核心就在播放器中<br>播放器由播放菜单栏(.play_info)与播放详情页(bigPlay)组成<br><img src="../img/3.jpg" alt="img3"><img src="../img/4.jpg" alt="img4"></p>
 <p>#播放/暂停时间stop()<br>  先确认<audio>标签中的src是否有值，初始化为unknown，若无值ting=false,播放器按钮的背景就无法进行改变，<br>再更具this.ting去判断是否audio元素进行暂停还是播放，并更具判断设定一系列的设定<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">this</span>.nowAudio.src）&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.ting)&#123;...&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></audio></p>
 <p>#上一首pre()<br>  判断this.songListIndex(当前播放曲单的下标)是否为0，也就是第一首，若是第一首就更新vuex中state中<br>nowSongListIndex的值，m-play中computed计算属性基于它的依赖缓存，相关依赖发生改变时会又会重新取值<br>更新view界面的数据</p>
 <p>#下一首next()<br>  判断this.songListIndex(当前播放曲单的下标)是否为this.songListIndex-1，也就是最后一首，若是<br>最后一首就更新vuex中state中nowSongListIndex的值，m-play中computed计算属性基于它的依赖缓存，相关<br>依赖发生改变时会又会重新取值更新view界面的数据</p>
@@ -381,6 +381,7 @@
 <p>##过程中出现的问题<br>1.m-play组件的放置<br>  刚开始我将m-play放在各导航目录组件下，这就导致我在播放音乐时，每进入一个导航目录时，都会初始化我的<br>m-play组件，不能是播放一首歌曲是可以任意去别的页面，所以最后我将m-play组件放置在home组件中，直接解决<br>此问题<br>2.input[text=range] v-model=songCurrent问题<br>  在我绑定range表单后，在timeProgess()周期函数中，每隔1s我就根据歌曲播放的时间来更新songCurrent的值<br>但是我在watch中设置了songCurrent来监听我对滑轨的滑动，这就会导致音乐播放时会出现重音的效果，后检查因为<br>我在timeProgess()周期函数中设置了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.songCurrent=<span class="built_in">Math</span>.floor(<span class="keyword">this</span>.nowAudio.currentTime);   </span><br><span class="line"><span class="comment">//进度条上时间与歌曲时间一致</span></span><br></pre></td></tr></table></figure></p>
 <p>在watch中设置了一但songCurrent变动就实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.nowAudio.currentTime=newValue;</span><br></pre></td></tr></table></figure></p>
 <p>可能因为时差的关系，在周期函数中每1s更新songCurrent,watch中有重置songCurrent导致播放重复<br>最后，我就将周期函数中this.songCurrent直接换成this.nowAudio.vlue,我每秒钟去更新value的值，而<br>songCurrent只是去监听滑轨有变动再执行，问题解决，无重音</p>
+<p>github地址 <a href="https://github.com/wangwenhua1630/vue_music" target="_blank" rel="noopener">demo</a></p>
 
       
     </div>
